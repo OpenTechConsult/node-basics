@@ -11,6 +11,7 @@ const routeHandlers = (request, response) => {
         return response.end();
     }
 
+
     if (url === '/message' && request.method === 'POST') {
         const body = [];
 
@@ -26,7 +27,7 @@ const routeHandlers = (request, response) => {
             fs.writeFile('message.txt', message, (err) => {
                 response.statusCode = 302;
                 response.setHeader('Location', '/');
-                response.end();
+                response.end();        
             });
         });    
     }
