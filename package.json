@@ -4,7 +4,7 @@
   "description": "Learn the Node.js basics",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/OpenTechConsult/node-basics/issues"
   },
-  "homepage": "https://github.com/OpenTechConsult/node-basics#readme"
+  "homepage": "https://github.com/OpenTechConsult/node-basics#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
