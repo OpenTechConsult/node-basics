@@ -15,3 +15,17 @@ html(lang="en")
                         a.active(href="/") Shop
                     li.main-header__item 
                         a(href="/admin/add-product") Add Product
+        
+        main 
+            .grid
+                each product in prods 
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.product}
+                        .card__image
+                            img(src="https://www.packtpub.com/media/catalog/product/cache/abd628df6af33f734d56624223a191f5/9/7/9781801077361-original_55.png")
+                        .card__content
+                            h2.product__price $5.99
+                            p.product__description C# 10 and .NET 6 – Modern Cross-Platform... 
+                        .card__actions
+                            button.btn Add to Cart
