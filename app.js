@@ -3,11 +3,16 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+
+const {engine} = require('express-handlebars');
+
 const adminData = require('./routes/admin');
 const shopRouter = require('./routes/shop');
 
 const app = express();
-app.set('view engine', 'pug');
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
 app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
